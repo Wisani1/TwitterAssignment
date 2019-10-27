@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html">
+	
+    <h:head>
+        <title>Twitter Management System</title>
+        
+     <style type="text/css">
+        
+       div {
+         border: 3px solid #666;
+         height: 500px;
+         text-align: center;
+         color:green;
+          width: 350px;
+        }
+    .commandButton  {
+    margin: 5px;
+    padding: 5px 5px 5px 20px; 
+    border: 1px solid #aaa;
+}
+        
+        </style>
+    </h:head>
+    
+    <h:body style = "background-color:grey;">
+    <div>
+    
+    	<h2>Welcome to Tweeter platform</h2>
+    	<h:form>
+    		
+          <h:inputTextarea cols="30" rows="10"  value="#{twitteroperationcontroller.twitterOperation.textArea}" />
+    	  
+    	    <br/>
+    	    <br/>
+    	    <h:commandButton value="POST"
+    	    	action="#{twitteroperationcontroller.updateStatusonTweeter}">
+    	    </h:commandButton>
+    	   
+    	  <P> <h:commandButton value="VIEW TWEET"
+    	    	action="#{tweeteroperationcontroller.viewTwitter}">
+    	    </h:commandButton> </P> 
+    	  
+    	</h:form>
+    	</div>
+    </h:body>
+    
+  
+</html>
+
